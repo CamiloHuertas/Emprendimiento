@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.title {
+  color: #273c75;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17px;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.header .menuMovileIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header button {
+  padding: 0;
+  margin: 15px;
+  height: 100%;
+}
+.header .navigation {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: auto;
+  background: #273c75;
+  transform: translateX(1000px);
+  transition: all ease 0.2s;
+  position: relative;
+  top: -8px;
+}
+.header .navigation a {
+  color: #fff;
+  padding: 20px;
+  border-bottom: 5px solid #fff;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 0;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 80%;
+  margin: auto;
+}
+.main .vision, .main .mision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: transparent;
+  width: 0;
+}
+
+.navigation.active {
+  transform: translateX(0px);
+}
+
+.overlay.active {
+  background: rgba(0, 0, 0, 0.808);
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    width: 50%;
+  }
+
+  .menuMovileIcon {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+  .header .navigation {
+    width: 40%;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .header .navigation a {
+    width: auto;
+    margin-right: 20px;
+    position: relative;
+    top: 0;
+    border-bottom: none;
+    background: none;
+    color: #273c75;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .header .navigation a::after {
+    content: "";
+    width: 0%;
+    display: block;
+    position: absolute;
+    height: 3px;
+    background: #273c75;
+    transition: all ease 0.3s;
+  }
+  .header .navigation a:hover::after {
+    width: 70%;
+  }
+
+  .banner {
+    margin-top: 80px;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
